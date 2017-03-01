@@ -1,0 +1,2 @@
+vhdtdtfi -lib work Q3.vhd -prj Lab1-3 -o Q3.spl -module Q3 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Q3.spl C:/Users/Jacob/Desktop/VHDL/EECE387/Lab1-3/Q3.sym 
