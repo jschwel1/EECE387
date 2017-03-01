@@ -23,24 +23,24 @@
 
 
 
-void setTimer(uint8_t n){
+void setTimer0(uint8_t n){
 	TCNT0 = n;
 }
-void clearTimer(){
+void clearTimer0(){
 	setTimer(0x00);	
 }
 
-uint8_t getTime(){
+uint8_t getTime0(){
 	return TCNT0;
 }
 
-void setCompRegA(uint8_t n){
+void setCompRegA0(uint8_t n){
 	OCR0A = n;
 }
-void setCompRegB(uint8_t n){
+void setCompRegB0(uint8_t n){
 	OCR0B = n;
 }
-void enableA(uint8_t m){
+void enableA0(uint8_t m){
 	if (m == 0){
 		TCCR0A &= ~(1 << COM0A1) & ~(1 << COM0A0);
 	}
@@ -57,7 +57,7 @@ void enableA(uint8_t m){
 	}
 }
 
-void enableB(uint8_t m){
+void enableB0(uint8_t m){
 	if (m == 0){
 		TCCR0A &= ~(1 << COM0B1) & ~(1 << COM0B0);
 	}
@@ -75,7 +75,7 @@ void enableB(uint8_t m){
 }
 
 
-void setWGM(uint8_t mode){
+void setWGM0(uint8_t mode){
 	if (mode == 0){
 		TCCR0B &= ~(1 << WGM02);
 		TCCR0A &= ~(1 << WGM01) & ~(1 << WGM00);
@@ -115,7 +115,7 @@ void setWGM(uint8_t mode){
 
 }
 
-void setPrescale(uint8_t ps){
+void setPrescale0(uint8_t ps){
 	if (ps == 0){
 		TCCR0A &= ~(1 << CS02) & ~(1 << CS01) & ~(1 << CS00);
 	}

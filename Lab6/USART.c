@@ -30,7 +30,6 @@
 // USART
 // UCSR0A Register
 
-// Doubles the speed of the BAUD_RATE
 #define RXC0 	7
 #define FE0	4 
 #define DOR0	3
